@@ -1,0 +1,78 @@
+/* Auto-loaded by Dash from the ./assets folder. Same style as the NSBI Smart Building Mapping web app. */
+:root {
+  --accent: #1f4e79;
+  --accent-2: #2e75b6;
+  --bg: #f3f5f9;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --muted: #5d6675;
+  --border: #dfe3ea;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+
+/* Navigation */
+.navbar { position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between;
+          flex-wrap: wrap; gap: 8px; padding: 10px 24px; background: var(--accent); color: #fff;
+          box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+.navbar .brand { font-weight: 600; font-size: 1.1rem; letter-spacing: .2px; }
+.navbar nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.nav-link { color: #fff; text-decoration: none; opacity: .85; padding: 4px 2px; border-bottom: 2px solid transparent; }
+.nav-link:hover { opacity: 1; border-bottom-color: #fff; }
+.nav-right { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.nav-logos { display: flex; align-items: center; gap: 10px; padding-left: 20px; border-left: 1px solid rgba(255,255,255,.35); }
+.nav-logo { height: 40px; width: auto; display: block; border-radius: 4px; box-shadow: 0 0 0 1px rgba(255,255,255,.35); }
+/* Logos with dark text on a transparent background (EDISON) get a white tile */
+.nav-logo-light { background: #fff; padding: 4px 8px; }
+@media (max-width: 700px) { .nav-logos { padding-left: 0; border-left: none; } .nav-logo { height: 30px; } }
+
+.container { max-width: 1400px; margin: 0 auto; padding: 16px 24px 48px; }
+.page-head h1 { margin: 8px 0 4px; font-size: 1.7rem; }
+.page-head p { margin: 0 0 16px; color: var(--muted); }
+
+/* Cards and grids */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px;
+        margin-bottom: 18px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.card-title { margin: 0 0 4px; font-size: 1.15rem; color: var(--accent); }
+.card-subtitle { margin: 0 0 12px; color: var(--muted); font-size: .9rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.grid-2 > .card, .grid-3 > .card { margin-bottom: 0; }
+.grid-2 + .grid-2, .grid-2 + .card, .card + .grid-2, .grid-3 + .card { margin-top: 18px; }
+@media (max-width: 1000px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .container { padding: 12px 16px 32px; } }
+
+.control { margin-bottom: 12px; }
+.control-label { display: block; font-size: .82rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
+.radio label { display: block; margin: 4px 0; }
+
+/* KPIs */
+.kpi-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
+@media (max-width: 800px) { .kpi-row { grid-template-columns: 1fr; } }
+.kpi { cursor: help; background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent-2);
+       border-radius: 10px; padding: 12px 16px; }
+.kpi-label { font-size: .8rem; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); }
+.kpi-value { font-size: 1.6rem; font-weight: 600; margin-top: 2px; }
+.kpi-sub { font-size: .85rem; color: var(--muted); }
+
+/* Buttons, inputs, misc */
+.btn { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 7px 14px; cursor: pointer; font-size: .9rem; }
+.btn:hover { background: var(--accent-2); }
+.muted { color: var(--muted); font-size: .9rem; }
+.field-input { width: 100%; padding: 7px 9px; border: 1px solid var(--border); border-radius: 6px; font-size: .92rem; }
+.link-strong { font-weight: 600; color: var(--accent); }
+.msg { margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-size: .92rem; }
+.msg-ok { background: #e8f5ec; border: 1px solid #9fd3ae; }
+.msg-error { background: #fdecec; border: 1px solid #f1a9a9; }
+
+/* Tables */
+.info-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.info-table th, .info-table td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+.info-table th { color: var(--muted); font-weight: 600; width: 34%; }
+.compare-table th { width: auto; }
+
+/* Home: step cards and centred EDISON logo */
+.step-card { display: flex; flex-direction: column; }
+.step-card .link-strong { margin-top: auto; }
+.about-logo { text-align: center; margin: 18px 0 4px; }
+.about-logo img { height: 90px; width: auto; }

@@ -1,0 +1,25 @@
+[project]
+name = "edison-sri-tool"
+version = "0.1.0"
+description = "EDISON SRI upgrade decision tool – draft multi-page Dash web app (dummy data)"
+readme = "README.md"
+requires-python = ">=3.13"
+# Same versions as the NSBI web app. To upgrade: `uv add dash@latest` (or edit here) then `uv sync`.
+dependencies = [
+    "dash==4.4.1",
+    "dash-ag-grid==35.3.0",
+    "plotly==7.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.uv]
+# An app, not a library: uv installs the dependencies only and does not build/install this project.
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
