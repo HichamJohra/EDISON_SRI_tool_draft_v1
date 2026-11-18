@@ -34,15 +34,24 @@ PyCharm: Settings → Project → Python Interpreter → Add Interpreter → Add
 app.py                  Dash app, navbar with logos, shared dcc.Store state, page container
 pages/                  One file per page (auto-registered with dash.register_page)
   home.py               Overview and links to the steps
-  assessment.py         1. Building data + current service levels (editable table)
-  objectives.py         2. Target class or budget
-  results.py            3. Recommended package, KPIs, cost–SRI curve
+  assessment.py         1. Import an existing SRI assessment and visualise it (draft: loads the ARV example)
+  services.py           2. Smart services: levels, technical requirements, level-by-level SRI / cost sensitivity
+  objectives.py         3. Objectives & constraints: target class or budget, cost database, floor area
+  results.py            4. Upgrade plan: recommended package, KPIs, cost–SRI curve (dummy catalogue)
   about.py              What is dummy and what comes next
 components/ui.py        Card, control, KPI, graph and table helpers (as in the NSBI app)
 edison_sri/             Core logic, no Dash imports (testable on its own)
   catalogue.py          Dummy services, domain weights, cost matrices, defaults
   scoring.py            Placeholder SRI score and Annex VIII classes
   optimiser.py          Cost of upgrades, cost–SRI front, target/budget selection
+  sri_assessment.py     Import methods; loads the preset assessment from data/
+  sri_engine.py         EU SRI calculation (reproduces the EU calculation sheet v4.5 exactly)
+  requirements.py       Technical requirements per service level and cost databases (dummy prices)
+data/arv_voldslokka_2025.json  ARV pilot (Voldsløkka) from the EU SRI calculation sheet v4.5, Method B
+data/sri_catalogue_v4_5.json   EU service catalogue: levels and impact scores of the 54 services
+tools/eu_excel_to_json.py      Converter: EU SRI calculation sheet (Excel v4.5) → app JSON
+                        uv run --with openpyxl python tools/eu_excel_to_json.py in.xlsx out.json --name "…" \
+                            --catalogue data/sri_catalogue_v4_5.json
 assets/style.css        Styling copied from the NSBI app (loaded automatically by Dash)
 assets/logos/           EDISON and SINTEF logos; assets/favicon.ico = SINTEF icon
 tests/test_core.py      Tests for the core logic

@@ -44,7 +44,8 @@ def navbar() -> html.Header:
 # Shared state between pages. storage_type="session" = the browser's sessionStorage: kept while moving between
 # pages and on reload, separate for every browser tab, cleared when the tab is closed.
 app.layout = html.Div([
-    dcc.Store(id="store-assessment", storage_type="session", data=DEFAULT_ASSESSMENT),
+    dcc.Store(id="store-sri", storage_type="session"),  # imported SRI assessment (page 1)
+    dcc.Store(id="store-assessment", storage_type="session", data=DEFAULT_ASSESSMENT),  # dummy catalogue (page 3)
     dcc.Store(id="store-objectives", storage_type="session", data=DEFAULT_OBJECTIVES),
     navbar(),
     html.Main(dash.page_container, className="container"),

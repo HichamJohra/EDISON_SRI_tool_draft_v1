@@ -1,0 +1,6531 @@
+{
+ "format": "edison-sri-catalogue/0.1",
+ "source": "EU SRI calculation sheet v4.5",
+ "impact_criteria": [
+  "Energy efficiency",
+  "Energy flexibility and storage",
+  "Comfort",
+  "Convenience",
+  "Health, well-being and accessibility",
+  "Maintenance and fault prediction",
+  "Information to occupants"
+ ],
+ "domains": [
+  "Heating",
+  "Domestic hot water",
+  "Cooling",
+  "Ventilation",
+  "Lighting",
+  "Dynamic building envelope",
+  "Electricity",
+  "Electric vehicle charging",
+  "Monitoring and control"
+ ],
+ "services": [
+  {
+   "code": "H-1a",
+   "domain": "Heating",
+   "group": "Heat control - demand side",
+   "service": "Heat emission control",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Central automatic control (e.g. central thermostat)",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Individual room control (e.g. thermostatic valves, or electronic controller)",
+     "impacts": [
+      2,
+      0,
+      2,
+      2,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Individual room control with communication between controllers and to BACS",
+     "impacts": [
+      2,
+      0,
+      2,
+      3,
+      2,
+      1,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Individual room control with communication and occupancy detection",
+     "impacts": [
+      3,
+      0,
+      2,
+      3,
+      2,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-1b",
+   "domain": "Heating",
+   "group": "Heat control - demand side",
+   "service": "Emission control for TABS (heating mode)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Central automatic control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Advanced central automatic control",
+     "impacts": [
+      1,
+      0,
+      1,
+      2,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Advanced central automatic control with intermittent operation and/or room temperature feedback control",
+     "impacts": [
+      2,
+      0,
+      2,
+      3,
+      2,
+      1,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-1c",
+   "domain": "Heating",
+   "group": "Heat control - demand side",
+   "service": "Control of distribution fluid temperature (supply or return air flow or water flow) - Similar function can be applied to the control of direct electric heating networks",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Outside temperature compensated control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Demand based control",
+     "impacts": [
+      2,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-1d",
+   "domain": "Heating",
+   "group": "Heat control - demand side",
+   "service": "Control of distribution pumps in networks",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "On off control",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Multi-Stage control",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Variable speed pump control (pump unit (internal) estimations)",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Variable speed pump control (external demand signal)",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-1f",
+   "domain": "Heating",
+   "group": "Heat control - demand side",
+   "service": "Thermal Energy Storage (TES) for building heating (excluding TABS)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Continuous storage operation",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Time-scheduled storage operation",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Load prediction based storage operation",
+     "impacts": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Heat storage capable of flexible control through grid signals (e.g. DSM)",
+     "impacts": [
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-2a",
+   "domain": "Heating",
+   "group": "Control heat production facilities",
+   "service": "Heat generator control (all except heat pumps)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Constant temperature control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Variable temperature control depending on outdoor temperature",
+     "impacts": [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Variable temperature control depending on the load (e.g. depending on supply water temperature set point)",
+     "impacts": [
+      2,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-2b",
+   "domain": "Heating",
+   "group": "Control heat production facilities",
+   "service": "Heat generator control (for heat pumps)",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "On/Off-control of heat generator",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Multi-stage control of heat generator capacity depending on the load or demand (e.g. on/off of several compressors)",
+     "impacts": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Variable control of heat generator capacity depending on the load or demand (e.g. hot gas bypass, inverter frequency control)",
+     "impacts": [
+      2,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Variable control of heat generator capacity depending on the load AND external signals from grid",
+     "impacts": [
+      2,
+      3,
+      2,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-2d",
+   "domain": "Heating",
+   "group": "Control heat production facilities",
+   "service": "Sequencing in case of different heat generators",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Priorities only based on running time",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Control according to fixed priority list: e.g. based on rated energy efficiency",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Control according to dynamic priority list (based on current energy efficiency, carbon emissions and capacity of generators, e.g. solar, geothermal heat, cogeneration plant, fossil fuels)",
+     "impacts": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Control according to dynamic priority list (based on current AND predicted load, energy efficiency, carbon emissions  and capacity of generators)",
+     "impacts": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Control according to dynamic priority list (based on current AND predicted load, energy efficiency, carbon emissions, capacity of generators AND external signals from grid)",
+     "impacts": [
+      3,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-3",
+   "domain": "Heating",
+   "group": "Information to occupants and facility managers",
+   "service": "Report information regarding heating system performance",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Central or remote reporting of current performance KPIs (e.g. temperatures, submetering energy usage)",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Central or remote reporting of current performance KPIs and historical data",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Central or remote reporting of performance evaluation including forecasting and/or benchmarking",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Central or remote reporting of performance evaluation including forecasting and/or benchmarking; also including predictive management and fault detection",
+     "impacts": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      3,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "code": "H-4",
+   "domain": "Heating",
+   "group": "Flexibility and grid interaction",
+   "service": "Flexibility and grid interaction",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Scheduled operation of heating system",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Self-learning optimal control of heating system",
+     "impacts": [
+      2,
+      1,
+      2,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Heating system capable of flexible control through grid signals (e.g. DSM)",
+     "impacts": [
+      2,
+      3,
+      2,
+      3,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Optimized control of  heating system based on local predictions and grid signals (e.g. through model predictive control)",
+     "impacts": [
+      2,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DHW-1a",
+   "domain": "Domestic hot water",
+   "group": "Control DHW production facilities",
+   "service": "Control of DHW storage charging (with direct electric heating or integrated electric heat pump)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Automatic control on / off",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Automatic control on / off and scheduled charging enable",
+     "impacts": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Automatic control on / off and scheduled charging enable and multi-sensor storage management",
+     "impacts": [
+      2,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Automatic charging control based on local availability of renewables or information from electricity grid (DR, DSM)",
+     "impacts": [
+      2,
+      3,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DHW-1b",
+   "domain": "Domestic hot water",
+   "group": "Control DHW production facilities",
+   "service": "Control of DHW storage charging (using hot water generation)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Automatic control on / off",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Automatic control on / off and scheduled charging enable",
+     "impacts": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Automatic on/off control, scheduled charging enable and demand-based supply temperature control or multi-sensor storage management",
+     "impacts": [
+      2,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "DHW production system capable of automatic charging control based on external signals (e.g. from district heating grid)",
+     "impacts": [
+      2,
+      3,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DHW-1d",
+   "domain": "Domestic hot water",
+   "group": "Control DHW production facilities",
+   "service": "Control of DHW storage charging (with solar collector and supplymentary heat generation)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Manual selected control of solar energy or heat generation",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Automatic control of solar storage charge (Prio. 1) and supplementary storage charge",
+     "impacts": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Automatic control of solar storage charge (Prio. 1) and supplementary storage charge and demand-oriented supply or multi-sensor storage management",
+     "impacts": [
+      2,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Automatic control of solar storage charge (Prio. 1) and supplementary storage charge, demand-oriented supply and return temperature control and multi-sensor storage management",
+     "impacts": [
+      3,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DHW-2b",
+   "domain": "Domestic hot water",
+   "group": "Control DHW production facilities",
+   "service": "Sequencing in case of different DHW generators",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "Priorities only based on running time",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Control according to fixed priority list: e.g. based on rated energy efficiency",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Control according to dynamic priority list (based on current energy efficiency, carbon emissions and capacity of generators, e.g. solar, geothermal heat, cogeneration plant, fossil fuels)",
+     "impacts": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Control according to dynamic priority list (based on current AND predicted load, energy efficiency, carbon emissions  and capacity of generators)",
+     "impacts": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Control according to dynamic priority list (based on current AND predicted load, energy efficiency, carbon emissions, capacity of generators AND external signals from grid)",
+     "impacts": [
+      3,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DHW-3",
+   "domain": "Domestic hot water",
+   "group": "Information to occupants and facility managers",
+   "service": "Report information regarding domestic hot water performance",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Indication of actual values (e.g. temperatures, submetering energy usage)",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Actual values and historical data",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Performance evaluation including forecasting and/or benchmarking",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Performance evaluation including forecasting and/or benchmarking; also including predictive management and fault detection",
+     "impacts": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      2,
+      3
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-1a",
+   "domain": "Cooling",
+   "group": "Cooling control - demand side",
+   "service": "Cooling emission control",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Central automatic control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Individual room control",
+     "impacts": [
+      1,
+      0,
+      1,
+      2,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Individual room control with communication between controllers and to BACS",
+     "impacts": [
+      2,
+      0,
+      2,
+      3,
+      2,
+      1,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Individual room control with communication and occupancy detection",
+     "impacts": [
+      3,
+      0,
+      2,
+      3,
+      2,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-1b",
+   "domain": "Cooling",
+   "group": "Cooling control - demand side",
+   "service": "Emission control for TABS (cooling mode)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Central automatic control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Advanced central automatic control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Advanced central automatic control with intermittent operation and/or room temperature feedback control",
+     "impacts": [
+      2,
+      0,
+      2,
+      3,
+      2,
+      1,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-1c",
+   "domain": "Cooling",
+   "group": "Cooling control - demand side",
+   "service": "Control of distribution network chilled water temperature (supply or return)",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Constant temperature control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Outside temperature compensated control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Demand based control",
+     "impacts": [
+      2,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-1d",
+   "domain": "Cooling",
+   "group": "Cooling control - demand side",
+   "service": "Control of distribution pumps in networks",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "On off control",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Multi-Stage control",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Variable speed pump control (pump unit (internal) estimations)",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Variable speed pump control (external demand signal)",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-1f",
+   "domain": "Cooling",
+   "group": "Cooling control - demand side",
+   "service": "Interlock: avoiding simultaneous heating and cooling in the same room",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No interlock",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Partial interlock (minimising risk of simultanieus heating and cooling e.g. by sliding setpoints)",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Total interlock (control system ensures no  simultaneous heating and cooling can take place)",
+     "impacts": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-1g",
+   "domain": "Cooling",
+   "group": "Cooling control - demand side",
+   "service": "Control of Thermal Energy Storage (TES) operation",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Continuous storage operation",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Time-scheduled storage operation",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Load prediction based storage operation",
+     "impacts": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Cold storage capable of flexible control through grid signals (e.g. DSM)",
+     "impacts": [
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-2a",
+   "domain": "Cooling",
+   "group": "Control cooling production facilities",
+   "service": "Generator control for cooling",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "On/Off-control of cooling production",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Multi-stage control of  cooling production capacity depending on the load or demand (e.g. on/off of several compressors)",
+     "impacts": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Variable control of  cooling production capacity depending on the load or demand (e.g. hot gas bypass, inverter frequency control)",
+     "impacts": [
+      2,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Variable control of  cooling production capacity depending on the load AND external signals from grid",
+     "impacts": [
+      2,
+      3,
+      2,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-2b",
+   "domain": "Cooling",
+   "group": "Control cooling production facilities",
+   "service": "Sequencing of different cooling generators",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Priorities only based on running times",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Fixed sequencing based on loads only: e.g. depending on the generators characteristics such as absorption chiller vs. centrifugal chiller",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Dynamic priorities based on generator efficiency and characteristics (e.g. availability of free cooling)",
+     "impacts": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Load prediction based sequencing: the sequence is based on e.g. COP and available power of a device and the predicted required power",
+     "impacts": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Sequencing based on dynamic priority list, including external signals from grid",
+     "impacts": [
+      3,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-3",
+   "domain": "Cooling",
+   "group": "Information to occupants and facility managers",
+   "service": "Report information regarding cooling system performance",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Central or remote reporting of current performance KPIs (e.g. temperatures, submetering energy usage)",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Central or remote reporting of current performance KPIs and historical data",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Central or remote reporting of performance evaluation including forecasting and/or benchmarking",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Central or remote reporting of performance evaluation including forecasting and/or benchmarking; also including predictive management and fault detection",
+     "impacts": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      3,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C-4",
+   "domain": "Cooling",
+   "group": "Flexibility and grid interaction",
+   "service": "Flexibility and grid interaction",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Scheduled operation of cooling system",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Self-learning optimal control of cooling system",
+     "impacts": [
+      2,
+      1,
+      2,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Cooling system capable of flexible control through grid signals (e.g. DSM)",
+     "impacts": [
+      2,
+      3,
+      2,
+      3,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Optimized control of  cooling system based on local predictions and grid signals (e.g. through model predictive control)",
+     "impacts": [
+      2,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "V-1a",
+   "domain": "Ventilation",
+   "group": "Air flow control",
+   "service": "Supply air flow control at the room level",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No ventilation system or manual control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Clock control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Occupancy detection control",
+     "impacts": [
+      1,
+      0,
+      2,
+      2,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Central Demand Control based on air quality sensors (CO2, VOC, humidity, ...)",
+     "impacts": [
+      2,
+      0,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Local Demand Control based on air quality sensors (CO2, VOC,...) with local flow from/to the zone regulated by dampers",
+     "impacts": [
+      3,
+      0,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "V-1c",
+   "domain": "Ventilation",
+   "group": "Air flow control",
+   "service": "Air flow or pressure control at the air handler level",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control: Continuously supplies of air flow for a maximum load of all rooms",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "On off time control: Continuously supplies of air flow for a maximum load of all rooms during nominal occupancy time",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Multi-stage control: To reduce the auxiliary energy demand of the fan",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Automatic flow or pressure control without pressure reset: Load dependent supplies of air flow for the demand of all connected rooms.",
+     "impacts": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Automatic flow or pressure control with pressure reset: Load dependent supplies of air flow for the demand of all connected rooms (for variable air volume systems with VFD).",
+     "impacts": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "V-2c",
+   "domain": "Ventilation",
+   "group": "Air temperature control",
+   "service": "Heat recovery control:\nprevention of overheating",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Without overheating control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Modulate or bypass heat recovery based on sensors in air exhaust",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Modulate or bypass heat recovery based on multiple room temperature sensors or predictive control",
+     "impacts": [
+      2,
+      0,
+      2,
+      2,
+      2,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "V-2d",
+   "domain": "Ventilation",
+   "group": "Air temperature control",
+   "service": "Supply air temperature control at the air handling unit level",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Constant setpoint: A control loop enables to control the supply air_x000D_\ntemperature, the setpoint is constant and can only be modified by a manual_x000D_\naction",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Variable set point with outdoor temperature compensation",
+     "impacts": [
+      2,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Variable set point with load dependant compensation. A control loop enables to control the supply air temperature. The setpoint is defined as a function of the loads in the room",
+     "impacts": [
+      3,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "V-3",
+   "domain": "Ventilation",
+   "group": "Free cooling",
+   "service": "Free cooling with mechanical ventilation system",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "No automatic control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Night cooling",
+     "impacts": [
+      1,
+      0,
+      3,
+      2,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Free cooling: air flows modulated during all periods of time to minimize the amount of mechanical_x000D_\ncooling",
+     "impacts": [
+      2,
+      0,
+      3,
+      2,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "H,x- directed control: The amount of outside air and recirculation air are modulated during all periods of time to minimize the amount of mechanical cooling. Calculation is performed on the basis of temperatures and humidity\n(enthalpy).",
+     "impacts": [
+      3,
+      0,
+      3,
+      2,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "#REF!",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "V-6",
+   "domain": "Ventilation",
+   "group": "Feedback - Reporting information ",
+   "service": "Reporting information regarding IAQ",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Air quality sensors (e.g. CO2) and real time autonomous monitoring",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Real time monitoring & historical information of IAQ available to occupants",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      1,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Real time monitoring & historical information of IAQ available to occupants + warning on maintenance needs or occupant actions (e.g. window opening)",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      2,
+      3
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "L-1a",
+   "domain": "Lighting",
+   "group": "Artificial lighting control",
+   "service": "Occupancy control for indoor lighting",
+   "standard": "EN 15232",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Manual on/off switch",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Manual on/off switch + additional sweeping extinction signal",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Automatic detection (auto on / dimmed or auto off)",
+     "impacts": [
+      2,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Automatic detection (manual on / dimmed or auto off)",
+     "impacts": [
+      3,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "L-2",
+   "domain": "Lighting",
+   "group": "Control artificial lighting power based on daylight levels",
+   "service": "Control artificial lighting power based on daylight levels",
+   "standard": "EN 15193-1 and CEN-TR 16791",
+   "levels": [
+    {
+     "level": 0,
+     "description": "Manual (central)",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Manual (per room / zone)",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Automatic switching",
+     "impacts": [
+      2,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Automatic dimming",
+     "impacts": [
+      3,
+      0,
+      2,
+      2,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Automatic dimming including scene-based light control (during time intervals, dynamic and\nadapted lighting scenes are set, for example, in terms of\nilluminance level, different correlated colour temperature (CCT)\nand the possibility to change the light distribution within the space\naccording to e. g. design, human needs, visual tasks)",
+     "impacts": [
+      3,
+      0,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DE-1",
+   "domain": "Dynamic building envelope",
+   "group": "Window control",
+   "service": "Window solar shading control",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "No sun shading or only manual operation",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Motorized operation with manual control",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Motorized operation with automatic control based on sensor data",
+     "impacts": [
+      2,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Combined light/blind/HVAC control",
+     "impacts": [
+      3,
+      0,
+      2,
+      3,
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Predictive blind control (e.g. based on weather forecast)",
+     "impacts": [
+      3,
+      0,
+      3,
+      3,
+      3,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DE-2",
+   "domain": "Dynamic building envelope",
+   "group": "Window control",
+   "service": "Window open/closed control, combined with HVAC system",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "Manual operation or only fixed windows",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Open/closed detection to shut down heating or cooling systems",
+     "impacts": [
+      2,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Level 1 + Automised mechanical window opening based on room sensor data",
+     "impacts": [
+      2,
+      0,
+      2,
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Level 2 + Centralized coordination of operable windows, e.g. to control free natural night cooling",
+     "impacts": [
+      2,
+      0,
+      2,
+      2,
+      1,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "DE-4",
+   "domain": "Dynamic building envelope",
+   "group": "Feedback - Reporting information ",
+   "service": "Reporting information regarding performance of dynamic building envelope systems",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "No reporting",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Position of each product & fault detection",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Position of each product, fault detection & predictive maintenance",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Position of each product, fault detection, predictive maintenance, real-time sensor data (wind, lux, temperature…)",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Position of each product, fault detection, predictive maintenance, real-time & historical sensor data (wind, lux, temperature…)",
+     "impacts": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      3
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "E-2",
+   "domain": "Electricity",
+   "group": "Feedback - Reporting information ",
+   "service": "Reporting information regarding local electricity generation",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Current generation data available",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Actual values and historical data",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Performance evaluation including forecasting and/or benchmarking",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Performance evaluation including forecasting and/or benchmarking; also including predictive management and fault detection",
+     "impacts": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "code": "E-3",
+   "domain": "Electricity",
+   "group": "DER - Storage",
+   "service": "Storage of (locally generated) electricity",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "On site storage of electricity (e.g. electric battery)",
+     "impacts": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "On site storage of energy (e.g. electric battery or thermal storage) with controller based on grid signals",
+     "impacts": [
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "On site storage of energy (e.g. electric battery or thermal storage) with controller optimising the use of locally generated electricity",
+     "impacts": [
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "On site storage of energy (e.g. electric battery or thermal storage) with controller optimising the use of locally generated electricity and possibility to feed back into the grid",
+     "impacts": [
+      0,
+      3,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "E-4",
+   "domain": "Electricity",
+   "group": "DER- Optimization",
+   "service": "Optimizing self-consumption of locally generated electricity",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Scheduling electricity consumption (plug loads, white goods, etc.)",
+     "impacts": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Automated management of local electricity consumption based on current renewable energy availability",
+     "impacts": [
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Automated management of local electricity consumption based on current and predicted energy needs and renewable energy availability",
+     "impacts": [
+      0,
+      3,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "E-5",
+   "domain": "Electricity",
+   "group": "DER - Generation Control",
+   "service": "Control of combined heat and power plant (CHP)",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "CHP control based on scheduled runtime management and/or current heat energy demand",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "CHP runtime control influenced by the fluctuating availability of RES; overproduction will be fed into the grid",
+     "impacts": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "CHP runtime control influenced by the fluctuating availability of RES and grid signals; dynamic charging and runtime control to optimise self-consumption of renewables",
+     "impacts": [
+      2,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "E-8",
+   "domain": "Electricity",
+   "group": "DSM- Storage",
+   "service": "Support of (micro)grid operation modes",
+   "standard": "IEC TC 57",
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Automated management of (building-level) electricity consumption based on grid signals",
+     "impacts": [
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Automated management of (building-level) electricity consumption and electricity supply to neighbouring buildings (microgrid) or grid",
+     "impacts": [
+      0,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Automated management of (building-level) electricity consumption and supply, with potential to continue limited off-grid operation (island mode)",
+     "impacts": [
+      0,
+      3,
+      0,
+      3,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "E-11",
+   "domain": "Electricity",
+   "group": "Feedback - Reporting information ",
+   "service": "Reporting information regarding energy storage",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Current state of charge (SOC) data available",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Actual values and historical data",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Performance evaluation including forecasting and/or benchmarking",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Performance evaluation including forecasting and/or benchmarking; also including predictive management and fault detection",
+     "impacts": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "code": "E-12",
+   "domain": "Electricity",
+   "group": "Feedback - Reporting information ",
+   "service": "Reporting information regarding electricity consumption",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "reporting on current electricity consumption on building level",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "real-time feedback or benchmarking on building level",
+     "impacts": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "real-time feedback or benchmarking on appliance level",
+     "impacts": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "level": 4,
+     "description": "real-time feedback or benchmarking on appliance level with automated personalized recommendations",
+     "impacts": [
+      3,
+      0,
+      0,
+      1,
+      0,
+      2,
+      3
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "EV-15",
+   "domain": "Electric vehicle charging",
+   "group": "EV Charging",
+   "service": "EV Charging Capacity",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "not present",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "ducting (or simple power plug) available",
+     "impacts": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "0-9% of parking spaces has recharging points",
+     "impacts": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "10-50% or parking spaces has recharging point",
+     "impacts": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": ">50% of parking spaces has recharging point",
+     "impacts": [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "EV-16",
+   "domain": "Electric vehicle charging",
+   "group": "EV Charging - Grid",
+   "service": "EV Charging Grid balancing",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "Not present (uncontrolled charging)",
+     "impacts": [
+      0,
+      -2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "1-way controlled charging (e.g. including desired departure time and grid signals for optimization)",
+     "impacts": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "2-way controlled charging (e.g. including desired departure time and grid signals for optimization)",
+     "impacts": [
+      0,
+      3,
+      0,
+      2,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "EV-17",
+   "domain": "Electric vehicle charging",
+   "group": "EV Charging - connectivity",
+   "service": "EV charging information and connectivity",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "No information available",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Reporting information on EV charging status to occupant",
+     "impacts": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Reporting information on EV charging status to occupant AND automatic identification and authorizition of the driver to the charging station (ISO 15118 compliant)",
+     "impacts": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      3
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-3",
+   "domain": "Monitoring and control",
+   "group": "HVAC interaction control",
+   "service": "Run time management of HVAC systems",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "Manual setting",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Runtime setting of heating and cooling plants following a predefined time schedule",
+     "impacts": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Heating and cooling plant on/off control based on building loads",
+     "impacts": [
+      2,
+      1,
+      2,
+      2,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Heating and cooling plant on/off control based on predictive control or grid signals",
+     "impacts": [
+      3,
+      2,
+      2,
+      3,
+      1,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-4",
+   "domain": "Monitoring and control",
+   "group": "Fault detection",
+   "service": "Detecting faults of technical building systems and providing support to the diagnosis of these faults",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "No central indication of detected faults and alarms",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "With central indication of detected faults and alarms for at least 2 relevant TBS",
+     "impacts": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "With central indication of detected faults and alarms for all relevant TBS",
+     "impacts": [
+      0,
+      0,
+      0,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "With central indication of detected faults and alarms for all relevant TBS, including diagnosing functions",
+     "impacts": [
+      0,
+      0,
+      0,
+      3,
+      3,
+      3,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-9",
+   "domain": "Monitoring and control",
+   "group": "TBS interaction control",
+   "service": "Occupancy detection: connected services",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Occupancy detection for individual functions, e.g. lighting",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Centralised occupant detection which feeds in to several TBS such as lighting and heating",
+     "impacts": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      2,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-13",
+   "domain": "Monitoring and control",
+   "group": "Feedback - Reporting information ",
+   "service": "Central reporting of TBS performance and energy use",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Central or remote reporting of realtime energy use per energy carrier",
+     "impacts": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Central or remote reporting of realtime energy use per energy carrier, combining TBS of at least 2 domains in one interface",
+     "impacts": [
+      1,
+      0,
+      0,
+      2,
+      0,
+      2,
+      2
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Central or remote reporting of realtime energy use per energy carrier, combining TBS of all main domains in one interface",
+     "impacts": [
+      1,
+      0,
+      0,
+      3,
+      0,
+      3,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-25",
+   "domain": "Monitoring and control",
+   "group": "Smart Grid Integration",
+   "service": "Smart Grid Integration",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None - No harmonization between grid and TBS; building is operated independently from the grid load",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Demand side management possible for (some) individual TBS, but not coordinated over various domains",
+     "impacts": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Coordinated demand side management of multiple TBS",
+     "impacts": [
+      1,
+      3,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-28",
+   "domain": "Monitoring and control",
+   "group": "Feedback - Reporting information ",
+   "service": "Reporting information regarding demand side management performance and operation",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Reporting information on current DSM status, including managed energy flows",
+     "impacts": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Reporting information on currenthistorical and predicted DSM status, including managed energy flows",
+     "impacts": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      1,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-29",
+   "domain": "Monitoring and control",
+   "group": "Override control",
+   "service": "Override of DSM control",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "No DSM control",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "DSM control without the possibility to override this control by the building user (occupant or facility manager)",
+     "impacts": [
+      0,
+      3,
+      -2,
+      0,
+      0,
+      -1,
+      -2
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Manual override and reactivation of DSM control by the building user",
+     "impacts": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Scheduled override of DSM control (and reactivation) by the building user",
+     "impacts": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "Scheduled override of DSM control and reactivation with optimised control",
+     "impacts": [
+      0,
+      2,
+      0,
+      3,
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "code": "MC-30",
+   "domain": "Monitoring and control",
+   "group": "Single platform that allows automated control & coordination between TBS + optimization of energy flow based on occupancy, weather and grid signals",
+   "service": "Single platform that allows automated control & coordination between TBS + optimization of energy flow based on occupancy, weather and grid signals",
+   "standard": null,
+   "levels": [
+    {
+     "level": 0,
+     "description": "None",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "Single platform that allows manual control of multiple TBS",
+     "impacts": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "Single platform that allows automated control & coordination between TBS",
+     "impacts": [
+      1,
+      0,
+      0,
+      2,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "Single platform that allows automated control & coordination between TBS + optimization of energy flow based on occupancy, weather and grid signals",
+     "impacts": [
+      2,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 0,
+     "description": "User defined level 1-0",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 1,
+     "description": "User defined level 1-1",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 2,
+     "description": "User defined level 1-2",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 3,
+     "description": "User defined level 1-3",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "level": 4,
+     "description": "User defined level 1-4",
+     "impacts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  }
+ ]
+}

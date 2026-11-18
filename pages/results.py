@@ -7,13 +7,14 @@ from components.ui import card, graph, info_table, kpi_static, page_head
 from edison_sri.optimiser import best_package, package_table, pareto_front
 from edison_sri.scoring import sri_class, sri_score
 
-dash.register_page(__name__, path="/results", name="3. Upgrade plan", order=3,
+dash.register_page(__name__, path="/results", name="4. Upgrade plan", order=4,
                    title="Upgrade plan · EDISON SRI upgrade tool")
 
 ACCENT, ACCENT_2, HIGHLIGHT = "#1f4e79", "#2e75b6", "#c8581b"
 
 layout = html.Div([
-    page_head("3. Upgrade plan", "Computed from the saved assessment and objectives."),
+    page_head("4. Upgrade plan", "Computed from the objectives on a dummy 8-service catalogue "
+                                 "(not yet linked to the imported SRI assessment)."),
     html.Div(id="r-kpis", className="kpi-row"),
     html.Div(className="grid-2", children=[
         card(title="Recommended upgrades", subtitle="Sorted by cost per SRI point of each step on its own.",

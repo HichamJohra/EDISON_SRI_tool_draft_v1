@@ -26,10 +26,11 @@ def control(label: str, component) -> html.Div:
     return html.Div([html.Label(label, className="control-label"), component], className="control")
 
 
-def kpi_static(label: str, value: str, sub: str = "", description: str = "") -> html.Div:
-    """KPI card with a fixed value; `description` is shown on hover."""
+def kpi_static(label: str, value: str, sub: str = "", description: str = "", main: bool = False) -> html.Div:
+    """KPI card with a fixed value; `description` is shown on hover; `main=True` = highlighted (dark) card."""
     return html.Div([html.Div(label, className="kpi-label"), html.Div(value, className="kpi-value"),
-                     html.Div(sub, className="kpi-sub")], className="kpi", title=description or None)
+                     html.Div(sub, className="kpi-sub")], className="kpi kpi-main" if main else "kpi",
+                    title=description or None)
 
 
 def graph(gid: str, height: int | None = None, **kwargs) -> dcc.Loading:

@@ -65,4 +65,5 @@ DEFAULT_ASSESSMENT = {
     "levels": {"H-1a": 1, "H-3": 1, "DHW-1a": 0, "V-1a": 1, "L-1a": 0, "E-2": 1, "EV-15": 0, "MC-25": 0},
 }
 
-DEFAULT_OBJECTIVES = {"mode": "target", "target_class": "D", "budget_nok": 1_500_000}
+DEFAULT_OBJECTIVES = {"mode": "target", "target_class": "D", "budget_nok": 1_500_000,
+                      "cost_db": "default", "floor_area_m2": 17_500}  # ARV example: 10 000–25 000 m² class

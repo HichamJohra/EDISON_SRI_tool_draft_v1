@@ -25,11 +25,13 @@ GOALS = [
 ]
 
 FEATURES = [
-    ("1. Building and assessment", "/assessment",
-     "Enter the building and the current functionality level of each smart-ready service."),
-    ("2. Objectives", "/objectives",
-     "Choose target mode (SRI class) or budget mode (investment limit)."),
-    ("3. Upgrade plan", "/results",
+    ("1. SRI assessment", "/assessment",
+     "Import an existing SRI assessment (EDISON JSON, EU calculation sheet or SRI Norsk) and view its scores."),
+    ("2. Smart services", "/services",
+     "Each service's levels, technical requirements, and how SRI, cost and requirements change level by level."),
+    ("3. Objectives & constraints", "/objectives",
+     "Target mode (SRI class) or budget mode (investment limit), cost database and floor area."),
+    ("4. Upgrade plan", "/results",
      "Recommended upgrades with their cost, the SRI after upgrade and the cost–SRI curve."),
 ]
 
@@ -93,7 +95,7 @@ layout = html.Div([
          ]),
 
     html.H2("What the draft does today", className="section-title"),
-    html.Div(className="grid-3", children=[
+    html.Div(className="grid-4", children=[
         card([html.P(desc, className="muted"), dcc.Link("Open →", href=href, className="link-strong")],
              title=title, className="step-card")
         for title, href, desc in FEATURES
