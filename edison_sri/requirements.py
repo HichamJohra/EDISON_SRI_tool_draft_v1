@@ -1,7 +1,9 @@
 """Technical requirements of each service level and their prices (cost databases).
 
 DUMMY MODEL – placeholder until the EDISON requirement library exists: each functionality level needs the
-requirements of the level below plus a few typical items for its domain. Prices are invented round numbers.
+requirements of the level below plus a few typical items for its domain (shared equipment, e.g. a BMS), and – when
+a service code is given – one service-specific item per level step (its own devices and configuration).
+Prices are invented numbers.
 Each requirement is priced once: going from level a to level b costs the requirements of b not already needed
 at a (equipment already in the building costs nothing).
 """
@@ -72,21 +74,60 @@ DOMAIN_STEPS = {
 }
 
 
-def requirements_at(domain: str, level: int) -> list[str]:
-    """Technical requirements needed for a service of this domain at this level (cumulative, no duplicates)."""
+SERVICE_STEP = " – devices and configuration, level "
+
+
+def service_items(code: str, level: int) -> list[str]:
+    """Service-specific requirement per level step (dummy): e.g. 'V-3 – devices and configuration, level 2'."""
+    return [f"{code}{SERVICE_STEP}{k}" for k in range(1, max(level, 0) + 1)]
+
+
+def requirements_at(domain: str, level: int, code: str | None = None) -> list[str]:
+    """Technical requirements needed for a service of this domain at this level (cumulative, no duplicates):
+    shared domain equipment, plus the service's own items when `code` is given."""
     out: list[str] = []
     for step in DOMAIN_STEPS.get(domain, [])[:max(level, 0)]:
         out += [r for r in step if r not in out]
-    return out
+    return out + (service_items(code, level) if code else [])
+
+
+def _service_step_price(req: str) -> tuple[float, float]:
+    code, k = req.split(SERVICE_STEP)
+    h = sum(map(ord, code))
+    return 2 + h % 7 + int(k), 10_000 * (1 + (h + int(k)) % 4)  # dummy, deterministic per service and level
 
 
 def price(req: str, floor_area_m2: float, db: str = "default") -> float:
-    per_m2, fixed = DEFAULT_PRICES[req]  # only the default database exists in the draft
+    """Price in NOK of one requirement (only the default database exists in the draft)."""
+    per_m2, fixed = _service_step_price(req) if SERVICE_STEP in req else DEFAULT_PRICES[req]
     return per_m2 * floor_area_m2 + fixed
 
 
-def upgrade(domain: str, current: int, target: int, floor_area_m2: float, db: str = "default") -> dict:
+# Annual operation and maintenance cost as a share of the purchase price (dummy): software, services and platforms
+# carry licences / subscriptions; hardware needs maintenance.
+OPEX_KEYWORDS = ("software", "service", "platform", "interface", "app", "configuration")
+OPEX_RATE_SOFTWARE, OPEX_RATE_HARDWARE = 0.15, 0.02
+
+
+def opex_rate(req: str) -> float:
+    """Annual operating cost of a requirement as a fraction of its price (dummy)."""
+    return OPEX_RATE_SOFTWARE if any(k in req.lower() for k in OPEX_KEYWORDS) else OPEX_RATE_HARDWARE
+
+
+def annual_opex(req: str, floor_area_m2: float, db: str = "default") -> float:
+    """Annual operation and maintenance cost in NOK of one requirement."""
+    return opex_rate(req) * price(req, floor_area_m2, db)
+
+
+def annuity_factor(years: float, rate_percent: float) -> float:
+    """Present value of 1 NOK paid every year for `years` years at a discount rate (in %)."""
+    r = rate_percent / 100
+    return float(years) if r == 0 else (1 - (1 + r) ** -years) / r
+
+
+def upgrade(domain: str, current: int, target: int, floor_area_m2: float, db: str = "default",
+            code: str | None = None) -> dict:
     """Requirements to add and their cost to go from `current` to `target` (nothing if target <= current)."""
-    have = set(requirements_at(domain, current))
-    new = [r for r in requirements_at(domain, target) if r not in have] if target > current else []
+    have = set(requirements_at(domain, current, code))
+    new = [r for r in requirements_at(domain, target, code) if r not in have] if target > current else []
     return {"requirements": new, "cost": sum(price(r, floor_area_m2, db) for r in new)}

@@ -25,14 +25,21 @@ GOALS = [
 ]
 
 FEATURES = [
-    ("1. SRI assessment", "/assessment",
-     "Import an existing SRI assessment (EDISON JSON, EU calculation sheet or SRI Norsk) and view its scores."),
+    ("1. Initial SRI assessment", "/assessment",
+     "Import the building's existing SRI assessment (EDISON JSON, EU calculation sheet or SRI Norsk) and view its "
+     "scores."),
     ("2. Smart services", "/services",
      "Each service's levels, technical requirements, and how SRI, cost and requirements change level by level."),
     ("3. Objectives & constraints", "/objectives",
-     "Target mode (SRI class) or budget mode (investment limit), cost database and floor area."),
-    ("4. Upgrade plan", "/results",
-     "Recommended upgrades with their cost, the SRI after upgrade and the cost–SRI curve."),
+     "SRI, impact and domain targets, budgets (CAPEX, OPEX, per domain), technical and implementation limits."),
+    ("4. Optimization", "/optimization",
+     "Stochastic and optimal scenarios, parallel coordinates with limits, trade-offs between SRI, life-cycle cost "
+     "(CAPEX + OPEX) and technical requirements, full-screen analysis."),
+    ("5. SRI upgrade assessment", "/upgraded-assessment",
+     "Full SRI report of the selected scenario, compared with the initial assessment; export as JSON, Excel or PDF."),
+    ("6. Upgrade plan", "/results",
+     "Measures with explanations and priority, technical requirements, costs per service and domain, LCC, CAPEX, "
+     "OPEX and the check of objectives & constraints; export as Excel, JSON or PDF report."),
 ]
 
 PLANNED = [
@@ -95,7 +102,7 @@ layout = html.Div([
          ]),
 
     html.H2("What the draft does today", className="section-title"),
-    html.Div(className="grid-4", children=[
+    html.Div(className="grid-3 grid-steps", children=[
         card([html.P(desc, className="muted"), dcc.Link("Open →", href=href, className="link-strong")],
              title=title, className="step-card")
         for title, href, desc in FEATURES

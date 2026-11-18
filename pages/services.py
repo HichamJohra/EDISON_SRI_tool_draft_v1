@@ -67,15 +67,15 @@ def _levels_table(svc: dict, assessed: int | None) -> html.Table:
 
 def _requirements_table(svc: dict, assessed: int | None, area: float, db: str) -> html.Table:
     levels = [lv["level"] for lv in svc["levels"]]
-    reqs = requirements_at(svc["domain"], max(levels))
-    have = set(requirements_at(svc["domain"], assessed)) if assessed is not None else set()
+    reqs = requirements_at(svc["domain"], max(levels), svc["code"])
+    have = set(requirements_at(svc["domain"], assessed, svc["code"])) if assessed is not None else set()
     head = html.Tr([html.Th("Technical requirement"), html.Th("Price", className="num")] +
                    [html.Th(f"L{lv}", className="num") for lv in levels])
     body = []
     for r in reqs:
         cells = [html.Td(r), html.Td(_nok(price(r, area, db)), className="num")]
         for lv in levels:
-            needed = r in requirements_at(svc["domain"], lv)
+            needed = r in requirements_at(svc["domain"], lv, svc["code"])
             mark = ("0" if r in have else "x") if needed else ""
             cls = "num req-have" if needed and r in have else ("num req-buy" if needed else "num")
             cells.append(html.Td(html.Span(mark, className="req-mark") if mark else "", className=cls))
@@ -129,7 +129,7 @@ def _figures(svc: dict, assessment: dict, assessed: int | None, area: float, db:
         figs["dom"] = _line_fig(lv_s, [(svc["domain"], [p["domains"].get(svc["domain"]) for p in sens], ACCENT,
                                          "solid")], assessed, f"{svc['domain']} – domain score (%)", legend=False)
     # Additional investment
-    costs = [upgrade(svc["domain"], cur, lv, area, db)["cost"] for lv in levels]
+    costs = [upgrade(svc["domain"], cur, lv, area, db, svc["code"])["cost"] for lv in levels]
     f_cost = go.Figure(go.Bar(x=levels, y=[c / 1e3 for c in costs],
                               marker_color=[GREY if lv <= cur else ACCENT_2 for lv in levels],
                               hovertemplate="Level %{x}: +%{y:,.0f} kNOK<extra></extra>"))
@@ -141,9 +141,9 @@ def _figures(svc: dict, assessment: dict, assessed: int | None, area: float, db:
                               showarrow=False, font=dict(color="#5d6675", size=13))
     figs["cost"] = f_cost
     # Technical requirements
-    have_n = [len([r for r in requirements_at(svc["domain"], lv) if r in requirements_at(svc["domain"], cur)])
+    have_n = [len([r for r in requirements_at(svc["domain"], lv, svc["code"]) if r in requirements_at(svc["domain"], cur, svc["code"])])
               for lv in levels]
-    new_n = [len(upgrade(svc["domain"], cur, lv, area, db)["requirements"]) for lv in levels]
+    new_n = [len(upgrade(svc["domain"], cur, lv, area, db, svc["code"])["requirements"]) for lv in levels]
     f_req = go.Figure([
         go.Bar(x=levels, y=have_n, name="Already in the building", marker_color=GREY,
                hovertemplate="Level %{x}: %{y} already in place<extra></extra>"),
@@ -165,12 +165,12 @@ def _tradeoff_figs(svc: dict, sens: list[dict], cur: int, area: float, db: str):
     Changes are relative to the assessed level. Going down a level costs nothing here (no savings modelled) and
     its requirement change is negative (requirements no longer needed)."""
     base = next(p["total"] for p in sens if p["level"] == cur)
-    have = requirements_at(svc["domain"], cur)
+    have = requirements_at(svc["domain"], cur, svc["code"])
     pts = []
     for p in sens:
         lv = p["level"]
-        up = upgrade(svc["domain"], cur, lv, area, db)
-        d_req = len(up["requirements"]) if lv > cur else -(len(have) - len(requirements_at(svc["domain"], lv)))
+        up = upgrade(svc["domain"], cur, lv, area, db, svc["code"])
+        d_req = len(up["requirements"]) if lv > cur else -(len(have) - len(requirements_at(svc["domain"], lv, svc["code"])))
         pts.append((lv, 100 * (p["total"] - base), up["cost"] / 1e3, d_req))
 
     def fig(yvals, ytitle, yfmt):

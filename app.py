@@ -29,6 +29,7 @@ def navbar() -> html.Header:
     links = [
         dcc.Link(page["name"], href=page["relative_path"], className="nav-link")
         for page in dash.page_registry.values()
+        if page.get("nav", True)  # pages opened from other pages (nav=False) are not in the menu
     ]
     logos = [html.A(html.Img(src=app.get_asset_url(path), alt=name, className=f"nav-logo {extra}".strip()),
                     href=url, target="_blank", rel="noopener noreferrer", title=f"{name} – {url}")
@@ -48,6 +49,8 @@ app.layout = html.Div([
     dcc.Store(id="store-sri", storage_type="session"),  # imported SRI assessment (page 1)
     dcc.Store(id="store-assessment", storage_type="session", data=DEFAULT_ASSESSMENT),  # dummy catalogue (page 3)
     dcc.Store(id="store-objectives", storage_type="session", data=default_objectives()),
+    dcc.Store(id="store-opt", storage_type="session"),  # optimisation scenarios (page 4)
+    dcc.Store(id="store-opt-filters", storage_type="session"),  # parallel-coordinates axis limits (page 4)
     navbar(),
     html.Main(dash.page_container, className="container"),
 ])
