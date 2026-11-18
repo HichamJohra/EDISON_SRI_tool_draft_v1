@@ -3,7 +3,7 @@ from typing import Any
 
 import dash
 import dash_ag_grid as dag
-from dash import Input, Output, State, callback, dcc, html
+from dash import Input, Output, State, callback, dcc, html, no_update
 
 from components.ui import card, control, kpi_static, page_head
 from edison_sri.catalogue import BUILDING_CATEGORIES, SERVICES, SERVICE_BY_CODE
@@ -86,7 +86,10 @@ def live_score(rows, _):
     State("b-method", "value"), State("a-grid", "rowData"),
     prevent_initial_call=True,
 )
-def save(_, name, category, area, method, rows):
+def save(n_clicks, name, category, area, method, rows):
+    # Guard: Dash can fire this when the page is inserted, before the grid has data
+    if not n_clicks or not rows:
+        return no_update, no_update
     data = {
         "building": {"name": name, "category": category, "floor_area_m2": area or 1, "method": method},
         "levels": _levels(rows),

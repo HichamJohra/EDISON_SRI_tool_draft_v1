@@ -1,6 +1,6 @@
 """Step 2: decision mode and constraints."""
 import dash
-from dash import Input, Output, State, callback, dcc, html
+from dash import Input, Output, State, callback, dcc, html, no_update
 
 from components.ui import card, control, page_head
 
@@ -40,5 +40,7 @@ def toggle(mode):
           Input("o-save", "n_clicks"),
           State("o-mode", "value"), State("o-class", "value"), State("o-budget", "value"),
           prevent_initial_call=True)
-def save(_, mode, cls, budget):
+def save(n_clicks, mode, cls, budget):
+    if not n_clicks or not mode:  # guard against a firing when the page is inserted
+        return no_update, no_update
     return {"mode": mode, "target_class": cls, "budget_nok": budget or 0}, "Saved."

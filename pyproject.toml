@@ -8,6 +8,7 @@ requires-python = ">=3.13"
 dependencies = [
     "dash==4.4.1",
     "dash-ag-grid==35.3.0",
+    "gunicorn==26.2.0 ; sys_platform != 'win32'",
     "plotly==7.1.0",
 ]
 
@@ -23,3 +24,6 @@ package = false
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
+# Dash's own pytest plugin (dash.testing, browser tests) is not used here; disabling it also avoids its
+# PytestRemovedIn10Warning.
+addopts = "-p no:dash"

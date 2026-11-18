@@ -76,3 +76,32 @@ body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
 .step-card .link-strong { margin-top: auto; }
 .about-logo { text-align: center; margin: 18px 0 4px; }
 .about-logo img { height: 90px; width: auto; }
+
+/* Home: banner, goals, figures, planned development */
+.hero { position: relative; border-radius: 12px; overflow: hidden; min-height: 400px; margin: 8px 0 18px;
+        background-size: cover; background-position: center top; display: flex; align-items: flex-end; }
+.hero-text { width: 100%; padding: 28px 32px; color: #fff;
+             background: linear-gradient(to top, rgba(15,35,60,.85), rgba(15,35,60,0)); }
+.hero-text h1 { margin: 0 0 6px; font-size: 2.2rem; }
+.hero-text p { margin: 0 0 14px; font-size: 1.1rem; max-width: 640px; }
+.hero-btn { display: inline-block; background: #fff; color: var(--accent); font-weight: 600; text-decoration: none;
+            padding: 8px 16px; border-radius: 6px; }
+.hero-btn:hover { background: #eef3fa; }
+@media (max-width: 700px) { .hero { min-height: 300px; background-position: 78% top; } .hero-text { padding: 18px; } .hero-text h1 { font-size: 1.6rem; } }
+
+.section-title { margin: 26px 0 12px; font-size: 1.35rem; color: var(--accent); }
+.goal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 18px; }
+.goal { display: flex; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.goal h3 { margin: 2px 0 4px; font-size: 1.02rem; }
+.goal p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.4; }
+.goal-num { flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--accent-2); color: #fff;
+            font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+.figure { margin: 12px 0 4px; text-align: center; }
+.figure img { max-width: 100%; max-height: 520px; height: auto; }
+.figure figcaption { margin-top: 6px; color: var(--muted); font-size: .88rem; }
+
+.msg-warn { background: #fff4e0; border: 1px solid #f0c987; margin-bottom: 18px; }
+.plan-list { margin: 0; padding-left: 20px; line-height: 1.6; }
+.plan-list li { margin-bottom: 4px; }
+.plan-list span { color: var(--muted); }

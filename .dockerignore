@@ -1,0 +1,15 @@
+# Keep the image small and free of local/private files
+.git
+.gitignore
+.venv
+venv
+.idea
+.vscode
+__pycache__
+*.py[cod]
+.pytest_cache
+tests
+docs
+Dockerfile
+.dockerignore
+*.md
