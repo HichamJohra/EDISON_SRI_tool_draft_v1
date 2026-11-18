@@ -42,3 +42,15 @@ def test_domain_scores_match_sheet():
     r = compute(a)
     for d, ref in a["results"]["domains"].items():
         assert r["domains"][d] == pytest.approx(ref, abs=1e-12)
+
+
+def test_catalogue_levels_are_clean():
+    """Levels strictly increasing from 0, no Excel errors, and the sheet's maximum level is the last level."""
+    a = load_example()
+    for code, s in catalogue_by_code().items():
+        lv = [x["level"] for x in s["levels"]]
+        assert lv == sorted(set(lv)) and lv[0] == 0, code
+        assert not any(x["description"].startswith("#") for x in s["levels"]), code
+    for s in a["services"]:
+        if s["max_level_possible"] is not None:
+            assert s["max_level"] == s["max_level_possible"], s["code"]

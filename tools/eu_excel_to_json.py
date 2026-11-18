@@ -67,9 +67,13 @@ def read_catalogue(wb) -> dict:
                 cur = {"code": r[2], "domain": domain, "group": r[6], "service": r[3], "standard": None, "levels": []}
                 cat[r[2]] = cur
             elif cur is not None and isinstance(r[2], str) and r[2].startswith("level "):
-                if r[3] in (None, 0, "0", ""):
-                    continue  # level not defined for this service
-                cur["levels"].append({"level": int(r[2].split()[1]), "description": str(r[3]).strip(),
+                level = int(r[2].split()[1])
+                if cur["levels"] and level <= cur["levels"][-1]["level"]:
+                    cur = None  # a new block without service code (spare template rows, '#REF!'): stop here
+                    continue
+                if r[3] in (None, 0, "0", "") or str(r[3]).startswith("#"):
+                    continue  # level not defined for this service (or an Excel error)
+                cur["levels"].append({"level": level, "description": str(r[3]).strip(),
                                       "impacts": [r[4 + k] if isinstance(r[4 + k], (int, float)) else 0
                                                   for k in range(len(IMPACTS))]})
             elif cur is not None and r[3] == "Standard?" and isinstance(r[4], str) and r[4].strip():

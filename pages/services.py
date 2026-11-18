@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 from dash import Input, Output, State, callback, dcc, html
 
 from components.ui import GRAPH_CONFIG, card, page_head
-from edison_sri.catalogue import DEFAULT_OBJECTIVES
+from edison_sri.parameters import DEFAULT_SETTINGS
 from edison_sri.requirements import COST_DATABASES, price, requirements_at, upgrade
 from edison_sri.sri_assessment import load_example
 from edison_sri.sri_engine import KF_GROUPS, KF_NAMES, affected, catalogue_by_code, level_sensitivity, load_catalogue
@@ -154,7 +154,54 @@ def _figures(svc: dict, assessment: dict, assessed: int | None, area: float, db:
                         yaxis=dict(title="Technical requirements (number)", gridcolor="#dfe3ea", dtick=1),
                         legend=dict(orientation="h", y=1.12, x=0))
     figs["req"] = f_req
+    if sens:
+        figs["trade_cost"], figs["trade_req"] = _tradeoff_figs(svc, sens, cur, area, db)
     return figs
+
+
+def _tradeoff_figs(svc: dict, sens: list[dict], cur: int, area: float, db: str):
+    """Change in cost and in technical requirements against the change in SRI, one labelled point per level.
+
+    Changes are relative to the assessed level. Going down a level costs nothing here (no savings modelled) and
+    its requirement change is negative (requirements no longer needed)."""
+    base = next(p["total"] for p in sens if p["level"] == cur)
+    have = requirements_at(svc["domain"], cur)
+    pts = []
+    for p in sens:
+        lv = p["level"]
+        up = upgrade(svc["domain"], cur, lv, area, db)
+        d_req = len(up["requirements"]) if lv > cur else -(len(have) - len(requirements_at(svc["domain"], lv)))
+        pts.append((lv, 100 * (p["total"] - base), up["cost"] / 1e3, d_req))
+
+    def fig(yvals, ytitle, yfmt):
+        f = go.Figure()
+        f.add_trace(go.Scatter(x=[q[1] for q in pts], y=yvals, mode="lines", line=dict(color="#c5d6ec", dash="dot"),
+                               hoverinfo="skip", showlegend=False))
+        f.add_trace(go.Scatter(
+            x=[q[1] for q in pts], y=yvals, mode="markers+text", text=[f"L{q[0]}" for q in pts],
+            textposition="top center", textfont=dict(size=13, color=ACCENT),
+            marker=dict(size=[15 if q[0] == cur else 10 for q in pts],
+                        color=[HIGHLIGHT if q[0] == cur else ACCENT_2 for q in pts],
+                        line=dict(color="white", width=1)),
+            customdata=[q[0] for q in pts], showlegend=False,
+            hovertemplate="Level %{customdata}<br>ΔSRI %{x:+.2f} pt<br>" + yfmt + "<extra></extra>"))
+        f.add_vline(x=0, line=dict(color=GREY, width=1))
+        f.add_hline(y=0, line=dict(color=GREY, width=1))
+        xs = [q[1] for q in pts] + [0]
+        ys = list(yvals) + [0]
+        xpad = max(max(xs) - min(xs), 0.5) * 0.12
+        ypad = max(max(ys) - min(ys), 1) * 0.18  # room for the level labels above the markers
+        f.update_layout(margin=dict(l=60, r=20, t=25, b=45), height=320, plot_bgcolor="white", paper_bgcolor="white",
+                        xaxis=dict(title="Change in total SRI (percentage points)", gridcolor="#dfe3ea",
+                                   zeroline=False, range=[min(xs) - xpad, max(xs) + xpad]),
+                        yaxis=dict(title=ytitle, gridcolor="#dfe3ea", zeroline=False,
+                                   range=[min(ys) - ypad * 0.5, max(ys) + ypad]))
+        return f
+
+    f_cost = fig([q[2] for q in pts], "Change in investment (kNOK)", "Δ investment %{y:+,.0f} kNOK")
+    f_req = fig([q[3] for q in pts], "Change in technical requirements (number)", "Δ requirements %{y:+d}")
+    f_req.update_yaxes(dtick=1)
+    return f_cost, f_req
 
 
 def _graph(title, fig, note=None):
@@ -167,8 +214,8 @@ def _graph(title, fig, note=None):
 def show(code, stored, objectives):
     svc = catalogue_by_code()[code]
     assessment = stored or load_example()
-    obj = {**DEFAULT_OBJECTIVES, **(objectives or {})}
-    db, area = obj.get("cost_db", "default"), float(obj.get("floor_area_m2") or DEFAULT_OBJECTIVES["floor_area_m2"])
+    obj = {**DEFAULT_SETTINGS, **(objectives or {})}
+    db, area = obj.get("cost_db", "default"), float(obj.get("floor_area_m2") or DEFAULT_SETTINGS["floor_area_m2"])
     a_svc = next((s for s in assessment["services"] if s["code"] == code), None)
     counted = bool(a_svc and a_svc["applicable"] and a_svc["in_max_score"])
     assessed = a_svc["level"] if counted else None
@@ -226,7 +273,7 @@ def show(code, stored, objectives):
                             "Domain score as in the EU sheet results (impact-weighted mean over its criteria)."),
                  ]) if "sri" in figs else html.Div("This service does not count in this building's score "
                                                    "(not applicable), so it does not change the SRI.",
-                                                   className="msg msg-info"),
+                                                   className="msg msg-warning"),
                  html.Div(className="grid-2 sens-row", children=[
                      _graph("Key functionalities", figs["kf"],
                             "Solid = affected by this service; dotted = not affected (flat)."),
@@ -237,6 +284,13 @@ def show(code, stored, objectives):
                      _graph("Additional investment", figs["cost"]),
                      _graph("Technical requirements", figs["req"]),
                  ]),
+                 html.Div(className="grid-2 sens-row", children=[
+                     _graph("Investment against SRI gain", figs["trade_cost"],
+                            "One point per level (L0, L1 …), relative to the assessed level (orange, at 0 / 0). "
+                            "Lower levels cost nothing here: savings from removing equipment are not modelled."),
+                     _graph("Technical requirements against SRI gain", figs["trade_req"],
+                            "Requirements to add (positive) or no longer needed (negative) for each level."),
+                 ]) if "trade_cost" in figs else None,
                  html.P("SRI, key functionality, impact criterion and domain scores: EU calculation method, "
                         "reproducing the EU calculation sheet. Investment and technical requirements change with the "
                         "cost database and floor area set in “3. Objectives & constraints”; shared equipment with "

@@ -155,3 +155,14 @@ body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
          background: var(--accent); color: #fff; }
 .badge-light { background: #eef3fa; color: var(--accent); border: 1px solid #c5d6ec; font-weight: 500; }
 .sens-row { margin-top: 10px; }
+
+/* Objectives & constraints: save / import / export bar */
+.action-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.action-sep { width: 1px; height: 28px; background: var(--border); margin: 0 6px; }
+.btn-outline { background: #fff; color: var(--accent); border: 1px solid var(--accent); }
+.btn-outline:hover { background: #eef3fa; color: var(--accent); }
+.export-format { width: 150px; }
+.action-bar + #o-saved .msg, #o-saved + #o-export-msg .msg { margin-top: 12px; }
+.msg ul { margin: 6px 0 0; padding-left: 20px; }
+/* Warning (red): e.g. a service that does not count in the building's score */
+.msg-warning { background: #fdecec; border: 1px solid #f1a9a9; color: #8a1c1c; }

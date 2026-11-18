@@ -6,7 +6,8 @@ Layout and style follow the NSBI Smart Building Mapping web app.
 import dash
 from dash import Dash, dcc, html
 
-from edison_sri.catalogue import DEFAULT_ASSESSMENT, DEFAULT_OBJECTIVES
+from edison_sri.catalogue import DEFAULT_ASSESSMENT
+from edison_sri.parameters import defaults as default_objectives
 
 app = Dash(
     __name__,
@@ -46,7 +47,7 @@ def navbar() -> html.Header:
 app.layout = html.Div([
     dcc.Store(id="store-sri", storage_type="session"),  # imported SRI assessment (page 1)
     dcc.Store(id="store-assessment", storage_type="session", data=DEFAULT_ASSESSMENT),  # dummy catalogue (page 3)
-    dcc.Store(id="store-objectives", storage_type="session", data=DEFAULT_OBJECTIVES),
+    dcc.Store(id="store-objectives", storage_type="session", data=default_objectives()),
     navbar(),
     html.Main(dash.page_container, className="container"),
 ])

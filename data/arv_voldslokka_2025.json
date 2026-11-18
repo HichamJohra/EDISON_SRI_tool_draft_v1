@@ -875,7 +875,7 @@
    "triage": false,
    "in_max_score": true,
    "level": 2,
-   "max_level": 4,
+   "max_level": 3,
    "max_level_possible": 3,
    "level_description": "Free cooling: air flows modulated during all periods of time to minimize the amount of mechanical_x000D_\ncooling",
    "max_impacts": [
@@ -897,7 +897,7 @@
    "triage": true,
    "in_max_score": true,
    "level": 2,
-   "max_level": 4,
+   "max_level": 3,
    "max_level_possible": 3,
    "level_description": "Real time monitoring & historical information of IAQ available to occupants",
    "max_impacts": [
@@ -1227,7 +1227,7 @@
    "triage": false,
    "in_max_score": false,
    "level": 0,
-   "max_level": 4,
+   "max_level": 2,
    "max_level_possible": 2,
    "level_description": "No information available",
    "max_impacts": [
@@ -1403,7 +1403,7 @@
    "triage": true,
    "in_max_score": true,
    "level": 2,
-   "max_level": 4,
+   "max_level": 3,
    "max_level_possible": 3,
    "level_description": "Single platform that allows automated control & coordination between TBS",
    "max_impacts": [

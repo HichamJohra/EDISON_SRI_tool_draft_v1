@@ -36,7 +36,8 @@ pages/                  One file per page (auto-registered with dash.register_pa
   home.py               Overview and links to the steps
   assessment.py         1. Import an existing SRI assessment and visualise it (draft: loads the ARV example)
   services.py           2. Smart services: levels, technical requirements, level-by-level SRI / cost sensitivity
-  objectives.py         3. Objectives & constraints: target class or budget, cost database, floor area
+  objectives.py         3. Objectives & constraints: target class or budget, cost database, floor area;
+                        save, import and export (JSON, YAML, Excel)
   results.py            4. Upgrade plan: recommended package, KPIs, cost–SRI curve (dummy catalogue)
   about.py              What is dummy and what comes next
 components/ui.py        Card, control, KPI, graph and table helpers (as in the NSBI app)
@@ -47,12 +48,14 @@ edison_sri/             Core logic, no Dash imports (testable on its own)
   sri_assessment.py     Import methods; loads the preset assessment from data/
   sri_engine.py         EU SRI calculation (reproduces the EU calculation sheet v4.5 exactly)
   requirements.py       Technical requirements per service level and cost databases (dummy prices)
+  parameters.py         Objectives & constraints: the 49 table rows, validation, export/import (JSON, YAML, Excel)
 data/arv_voldslokka_2025.json  ARV pilot (Voldsløkka) from the EU SRI calculation sheet v4.5, Method B
 data/sri_catalogue_v4_5.json   EU service catalogue: levels and impact scores of the 54 services
 tools/eu_excel_to_json.py      Converter: EU SRI calculation sheet (Excel v4.5) → app JSON
                         uv run --with openpyxl python tools/eu_excel_to_json.py in.xlsx out.json --name "…" \
                             --catalogue data/sri_catalogue_v4_5.json
 assets/style.css        Styling copied from the NSBI app (loaded automatically by Dash)
+assets/dashAgGridFunctions.js  AG Grid helper: dropdown editor in the objectives table
 assets/logos/           EDISON and SINTEF logos; assets/favicon.ico = SINTEF icon
 tests/test_core.py      Tests for the core logic
 Dockerfile              Container for Google Cloud Run (uv + gunicorn); see docs/deployment.md
